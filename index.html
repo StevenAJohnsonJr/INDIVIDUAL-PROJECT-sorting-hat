@@ -15,9 +15,9 @@
     <div class="card">
       <h5 class="card-header">The Sorting Hat</h5>
       <div class="card-body">
-        <h5 class="card-title">Where is myu new Hogwarts home for the semester?</h5>
+        <h5 class="card-title">Where is my new Hogwarts home for the semester?</h5>
         <p class="card-text">Please click button then fill out form below</p>
-        <a href="#" class="btn btn-primary">Click Me</a>
+        <button  onclick="toggle()" class="btn btn-primary">Click Me</button>
       </div>
     </div>
 
@@ -29,11 +29,11 @@
 
 
     <form id="myForm">
-        <fieldset disabled>
+        <fieldset>
           <legend>House Registration</legend>
           <div class="mb-3">
-            <label for="disabledTextInput" class="form-label">Enter Your First and Lastname</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Full Name">
+            <label for="first and lastname" class="form-label">Enter Your First and Lastname</label>
+            <input type="text" id="input-name" class="form-control" placeholder="Full Name">
           </div>
           <div class="mb-3">
             <label for="disabledSelect" class="form-label">Name of House</label>
@@ -51,7 +51,7 @@
                 Do you like it here?
               </label>
             </div> 
-          <button type="submit"  class="btn btn-p"btn btn-primary>Submit</button>
+          <!-- <button id="addStudent" type="submit"  class="btn btn-p"btn btn-primary>Submit</button> -->
         </fieldset>
       </form>
 

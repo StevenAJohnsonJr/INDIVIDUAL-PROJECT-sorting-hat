@@ -182,7 +182,25 @@ const cardsToDom2 = (array1) => {
     }
 
     renderToDom("#myDiv1", html2)
+    console.log(renderToDom("#myDiv1", html2))
 };
+
+
+
+const studentDiv = (event) => { 
+  if (event.target.studentId.includes("expell")) {
+    const [, studentId] = event.target.studentId.split("--");
+    const indexOfStudent = houses.findIndex(
+      (volt) => Number.studentId === volt.id);
+    const studentDiv = houses.splice(indexOfStudent, 1);
+    voltHouse.push(studentDiv);
+    cardsToDom(houses);
+    cardsToDom2(studentDiv)
+  }
+};
+
+
+
 
 // const loadCards = document.querySelector("#loadCardButton");
 // loadCards.addEventListener("click", () => {
@@ -300,8 +318,8 @@ AllHouses.addEventListener('click', () => {
   };
 
 
-  const submitButton = document.querySelector("#addStudent");
-submitButton.addEventListener("click", createStudent);
+const submitButton = document.querySelector("#addStudent");
+ submitButton.addEventListener("click", createStudent);
 
 const startDom = () => {
   cardsToDom(houses);
@@ -309,16 +327,7 @@ const startDom = () => {
 
 startDom();
 
-const studentDiv = document.querySelector("#studentDiv");
 
-studentDiv.addEventListener("click", (event) => {
-  if (event.target.studentId.includes("expell")) {
-    const [, studentId] = event.target.studentId.split("--");
-    const indexOfStudent = houses.findIndex((object) => object.studentId === Number(studentId));
-    houses.splice(indexOfStudent, 1);
-  }
-  cardsToDom(houses);
-});
 
 const startApp = () => {
   cardsToDom(houses);
